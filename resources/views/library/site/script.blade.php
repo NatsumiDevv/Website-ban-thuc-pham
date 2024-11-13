@@ -1,12 +1,12 @@
 <!-- Js Plugins -->
-<script src="{{asset('public/site/js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{asset('public/site/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('public/site/js/jquery.nice-select.min.js')}}"></script>
-<script src="{{asset('public/site/js/jquery-ui.min.js')}}"></script>
-<script src="{{asset('public/site/js/jquery.slicknav.js')}}"></script>
-<script src="{{asset('public/site/js/mixitup.min.js')}}"></script>
-<script src="{{asset('public/site/js/owl.carousel.min.js')}}"></script>
-<script src="{{asset('public/site/js/main.js')}}"></script>
+<script src="{{asset('site/js/jquery-3.3.1.min.js')}}"></script>
+<script src="{{asset('site/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('site/js/jquery.nice-select.min.js')}}"></script>
+<script src="{{asset('site/js/jquery-ui.min.js')}}"></script>
+<script src="{{asset('site/js/jquery.slicknav.js')}}"></script>
+<script src="{{asset('site/js/mixitup.min.js')}}"></script>
+<script src="{{asset('site/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('site/js/main.js')}}"></script>
 <script>
    $('.search-result').hide();
    $('.input-search-ajax').keyup(function(){

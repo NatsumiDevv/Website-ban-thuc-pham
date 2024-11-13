@@ -4,7 +4,7 @@
       <div class="col-lg-4 col-md-6 col-sm-6">
          <div class="product__item">
                <div class="product__item__pic set-bg">
-                  <img src="{{asset('public/uploads/'.$item->image)}}" alt="" width="262px">
+                  <img src="{{asset('uploads/'.$item->image)}}" alt="" width="262px">
                   <ul class="product__item__pic__hover">
                      {{-- <li><a href="#"><i class="fa fa-heart"></i></a></li> --}}
                      <li><a href="{{route('home.show',$item->id)}}"><i class='fa fa-navicon'></i></a></li>

@@ -32,16 +32,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function contact()
-    {
-        return view('site.contact');
-    }
-    public function introduce()
-    {
-        return view('site.introduce');
-    }
+   
     public function index()
-    {   
+    {
         $productSale = DB::table('product')->where('sale_price', '>','price')->get();
         $data=Category::all();
         return view('site.home',[

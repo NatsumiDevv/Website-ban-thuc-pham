@@ -37,7 +37,7 @@
                            @endphp
                            <tr class="align-items-center">
                               <td class="shoping__cart__item">
-                                 <img src="{{url('public/uploads')}}/{{$item['image']}}" alt="" width="110px">
+                                 <img src="{{url('uploads')}}/{{$item['image']}}" alt="" width="110px">
                                  <h5>{{$item['name']}}</h5>
                               </td>
                               <td class="shoping__cart__price item">

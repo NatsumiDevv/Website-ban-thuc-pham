@@ -20,7 +20,7 @@
                      <ol>
                         @foreach ($item->orderdetail()->get() as $subitem)
                            <li>
-                              <img src="{{url('public/uploads')}}/{{$subitem->product()->first()->image}}" alt="" width="50">
+                              <img src="{{url('uploads')}}/{{$subitem->product()->first()->image}}" alt="" width="50">
                               {{$subitem->product()->first()->name.' ('.$subitem->quantity.'x'.number_format($subitem->product()->first()->price).')'}}
                            </li>
                         @endforeach

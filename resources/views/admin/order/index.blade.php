@@ -19,7 +19,7 @@
 @endsection
 @section('content')
    <!-- start: page -->
-   
+
    {{-- panel list --}}
    <section class="panel panel-featured">
       {{-- panel header start--}}
@@ -111,7 +111,7 @@
       @csrf
       @method('delete')
    </form>
-   
+
    {{-- modal --}}
    @include('admin.order.edit')
    <!-- end: page -->

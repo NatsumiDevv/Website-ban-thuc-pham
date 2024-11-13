@@ -5,8 +5,6 @@
 @section('nav')
    <li class="active"><a href="{{route('home.index')}}">Trang Chủ</a></li>
    <li><a href="{{route('home.shop')}}">Cửa Hàng</a></li>
-   <li><a href="{{route('home.introduce')}}">Giới Thiệu</a></li>
-   <li><a href="{{route('home.contact')}}">Liên Hệ</a></li>
 @endsection
 @section('nav-search')
 <div class="row">
@@ -31,24 +29,13 @@
                {{-- <button type="submit" class="site-btn">Tìm</button> --}}
             </form>
          </div>
-         <div class="hero__search__phone">
-            <div class="hero__search__phone__icon">
-               <i class="fa fa-phone"></i>
-            </div>
-            <div class="hero__search__phone__text">
-               <h5>+84 984.399.784</h5>
-               <span>Hỗ trợ 24/7</span>
-            </div>
-         </div>
+
       </div>
       <div class="search-result col-lg-9 pr-5">
       </div>
-      <div class="hero__item set-bg" style="" data-setbg="{{url('public/site')}}/img/bannerset.jpg">
+      <div class="hero__item set-bg" style="" data-setbg="{{url('site')}}/img/bannerset1.jpg">
          <div class="hero__text">
-            <span>Thực phẩm hữu cơ</span>
-            <h2>Hạt <br />100% Hữu cơ</h2>
-            <p>Nhận và giao hàng miễn phí có sẵn</p>
-            <a href="{{route('home.shop')}}" class="primary-btn">Cửa hàng</a>
+            <a href="{{route('home.shop')}}" class="primary-btn button-market">Cửa hàng</a>
          </div>
       </div>
    </div>
@@ -63,7 +50,7 @@
             @foreach ($sale as $item)
                <div class="col-lg-3">
                   <a href="{{route('home.show',$item->id)}}">
-                     <div class="categories__item set-bg" data-setbg="{{url('public/uploads')}}/{{$item->image}}">
+                     <div class="categories__item set-bg" data-setbg="{{url('uploads')}}/{{$item->image}}">
                         {{-- <h5><a class="bg-success text-white" style="" href="{{route('home.show',$item->id)}}">{{$item->name}}</a></h5> --}}
                      </div>
                   </a>
@@ -90,7 +77,7 @@
                   @foreach ($item->product()->limit(4)->get() as $product)
                      <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
                         <div class="featured__item">
-                           <div class="featured__item__pic set-bg" data-setbg="{{url('public/uploads')}}/{{$product->image}}">
+                           <div class="featured__item__pic set-bg" data-setbg="{{url('uploads')}}/{{$product->image}}">
                               <ul class="featured__item__pic__hover">
                                  {{-- <li><a href="#"><i class="fa fa-heart"></i></a></li> --}}
                                  <li><a href="{{route('home.show',$product->id)}}"><i class='fa fa-navicon'></i></a></li>

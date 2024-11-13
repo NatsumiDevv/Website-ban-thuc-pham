@@ -80,7 +80,7 @@
                         {{$item->id}}
                      </td>
                      <td class="actions">
-                        <img src="{{url('public/uploads')}}/{{$item->image}}" alt="" style="width: 100px">
+                        <img src="{{url('uploads')}}/{{$item->image}}" alt="" style="width: 100px">
                      </td>
                      <td class="actions">
                         {{$item->name}}
@@ -110,7 +110,7 @@
                      {{-- <td class="actions-hover actions-fade text-center"> --}}
                      <td class="actions">
                         <a href="{{route('product.edit',$item->id)}}" class="edit-row"><i class="fa fa-pencil"></i> Sửa</a>
-                        {{-- <a href="{{route('product.destroy',$item->id)}}" class="delete-row" data-name="{{$item->name}}"><i class="fa fa-trash-o"></i> Xóa</a> --}}
+                        <a href="{{route('product.destroy',$item->id)}}" class="delete-row" data-name="{{$item->name}}"><i class="fa fa-trash-o"></i> Xóa</a>
                      </td>
                   </tr>
                @endforeach
@@ -137,20 +137,20 @@
    </script>
    <script>
       // delete
-      // $('.delete-row').click(function(ev){
-      //    ev.preventDefault();
-      //    var _name=$(this).attr('data-name');
-      //    $('span#product').text('\''+_name+'\'');
+      $('.delete-row').click(function(ev){
+         ev.preventDefault();
+         var _name=$(this).attr('data-name');
+         $('span#product').text('\''+_name+'\'');
 
-      //    $('.modal-delete').fadeIn(500);
-      //    var _href=$(this).attr('href');
-      //    // on delete
-      //    $('.btn-delete').click(function(ev){
-      //       $('form#form-delete').attr('action',_href);
-      //       $('.modal-delete').fadeOut(500);
-      //       $('form#form-delete').submit();
-      //    })
-      // })
+         $('.modal-delete').fadeIn(500);
+         var _href=$(this).attr('href');
+         // on delete
+         $('.btn-delete').click(function(ev){
+            $('form#form-delete').attr('action',_href);
+            $('.modal-delete').fadeOut(500);
+            $('form#form-delete').submit();
+         })
+      })
       // close modal
       $('a.btn-close').click(function(ev){
          ev.preventDefault();

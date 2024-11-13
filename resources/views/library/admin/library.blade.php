@@ -1,21 +1,21 @@
 <!-- Vendor CSS -->
-<link rel="stylesheet" href="{{ asset('public/assets/vendor/bootstrap/css/bootstrap.css') }}">
-<link rel="stylesheet" href="{{ asset('public/assets/vendor/font-awesome/css/font-awesome.css') }}">
-<link rel="stylesheet" href="{{ asset('public/assets/vendor/magnific-popup/magnific-popup.css') }}">
-<link rel="stylesheet" href="{{ asset('public/assets/vendor/bootstrap-datepicker/css/datepicker3.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/font-awesome/css/font-awesome.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/magnific-popup/magnific-popup.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-datepicker/css/datepicker3.css') }}">
 
 <!-- Specific Page Vendor CSS -->
-<link rel="stylesheet" href="{{ asset('public/assets/vendor/select2/select2.css') }}">
-<link rel="stylesheet" href="{{ asset('public/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/select2/select2.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/jquery-datatables-bs3/assets/css/datatables.css') }}">
 
 <!-- Theme CSS -->
-<link rel="stylesheet" href="{{ asset('public/assets/stylesheets/theme.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/stylesheets/theme.css') }}">
 
 <!-- Skin CSS -->
-<link rel="stylesheet" href="{{ asset('public/assets/stylesheets/skins/default.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/stylesheets/skins/default.css') }}">
 
 <!-- Theme Custom CSS -->
-<link rel="stylesheet" href="{{ asset('public/assets/stylesheets/theme-custom.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/stylesheets/theme-custom.css') }}">
 <style>
    /* Chrome, Safari, Edge, Opera */
    input::-webkit-outer-spin-button,

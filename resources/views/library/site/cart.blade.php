@@ -1,4 +1,4 @@
-<script src="{{url('public/site')}}/js/jquery-3.3.1.min.js"></script>
+<script src="{{url('site')}}/js/jquery-3.3.1.min.js"></script>
 <script>
       $('a.decrement').click(function(event){
          event.preventDefault();

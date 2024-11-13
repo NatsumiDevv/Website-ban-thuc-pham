@@ -5,8 +5,6 @@
 @section('nav')
    <li><a href="{{route('home.index')}}">Trang Chủ</a></li>
    <li class="active"><a href="{{route('home.shop')}}">Cửa Hàng</a></li>
-   <li><a href="{{route('home.introduce')}}">Giới Thiệu</a></li>
-   <li><a href="{{route('home.contact')}}">Liên Hệ</a></li>
 @endsection
 @section('nav-search')
 <div class="row justify-content-center">
@@ -18,15 +16,6 @@
                {{-- <button type="submit" class="site-btn">Tìm</button> --}}
             </form>
          </div>
-         <div class="hero__search__phone">
-            <div class="hero__search__phone__icon">
-               <i class="fa fa-phone"></i>
-            </div>
-            <div class="hero__search__phone__text">
-               <h5>+84 984.399.784</h5>
-               <span>Hỗ trợ 24/7</span>
-            </div>
-         </div>
       </div>
       <div class="search-result col-lg-9 pr-5">
       </div>
@@ -34,23 +23,7 @@
 </div>
 @endsection
 @section('main')
-<!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="{{url('public/site')}}/img/breadcrumb.jpg">
-   <div class="container">
-      <div class="row">
-         <div class="col-lg-12 text-center">
-               <div class="breadcrumb__text">
-                  <h2>Cửa hàng Ogani</h2>
-                  <div class="breadcrumb__option">
-                     <a href="{{route('home.index')}}">Trang chủ</a>
-                     <span>Cửa hàng</span>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-</section>
-<!-- Breadcrumb Section End -->
+
    <!-- Product Section Begin -->
    <section class="product spad">
       <div class="container">
@@ -100,7 +73,7 @@
                                     <div class="latest-prdouct__slider__item">
                                        <a href="{{route('home.show',$item->id)}}" class="latest-product__item">
                                           <div class="latest-product__item__pic">
-                                             <img src="{{url('public/uploads')}}/{{$item->image}}" alt="">
+                                             <img src="{{url('uploads')}}/{{$item->image}}" alt="">
                                           </div>
                                           <div class="latest-product__item__text">
                                              <h6>{{$item->name}}</h6>
@@ -127,7 +100,7 @@
                               <div class="col-lg-4">
                                  <div class="product__discount__item">
                                     <div class="product__discount__item__pic set-bg"
-                                       data-setbg="{{url('public/uploads')}}/{{$item->image}}">
+                                       data-setbg="{{url('uploads')}}/{{$item->image}}">
                                        <div class="product__discount__percent"><span>-{{round((($item->price-$item->sale_price)/$item->price)*100,0)}} %</span></div>
                                        <ul class="product__item__pic__hover">
                                              {{-- <li><a href="#"><i class="fa fa-heart"></i></a></li> --}}

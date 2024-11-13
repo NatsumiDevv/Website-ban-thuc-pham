@@ -18,15 +18,7 @@
                {{-- <button type="submit" class="site-btn">Tìm</button> --}}
             </form>
          </div>
-         <div class="hero__search__phone">
-            <div class="hero__search__phone__icon">
-               <i class="fa fa-phone"></i>
-            </div>
-            <div class="hero__search__phone__text">
-               <h5>+84 984.399.784</h5>
-               <span>Hỗ trợ 24/7</span>
-            </div>
-         </div>
+       
       </div>
       <div class="search-result col-lg-9 pr-5">
       </div>
@@ -35,7 +27,7 @@
 @endsection
 @section('main')
    <!-- Breadcrumb Section Begin -->
-   <section class="breadcrumb-section set-bg" data-setbg="{{url('public/site')}}/img/breadcrumb.jpg">
+   <section class="breadcrumb-section set-bg" data-setbg="{{url('site')}}/img/breadcrumb.jpg">
       <div class="container">
          <div class="row">
             <div class="col-lg-12 text-center">

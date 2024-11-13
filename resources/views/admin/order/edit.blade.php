@@ -1,4 +1,4 @@
-<div class="modal modal-edit" tabindex="-1">
+{{-- <div class="modal modal-edit" tabindex="-1">
    <div class="modal-dialog">
       <div class="modal-content">
          <form action="" method="post" class="form-horizontal form-bordered" id="form-edit">
@@ -34,4 +34,4 @@
          </form>
       </div>
    </div>
-</div>
+</div> --}}

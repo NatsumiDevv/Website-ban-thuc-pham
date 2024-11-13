@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+{{-- @extends('layouts.admin')
 @section('title')
    <title>Ogani-Admin | Dashboard</title>
    <style>
@@ -68,14 +68,7 @@
 @section('title-panner')
    <h2>Dashboard</h2>
 @endsection
-@section('address')
-   <li>
-      <a href="{{route('admin.dashboard')}}">
-         <i class="fa fa-home text-primary"></i>
-      </a>
-   </li>
-   {{-- <li><span>Layouts</span></li> --}}
-@endsection
+
 @section('content')
 <!-- start: page -->
 <div class="row">
@@ -97,9 +90,7 @@
                               <strong class="amount">{{number_format($turnover)}}</strong>
                            </div>
                         </div>
-                        <div class="summary-footer">
-                           {{-- <a class="text-muted text-uppercase">(withdraw)</a> --}}
-                        </div>
+
                      </div>
                   </div>
                </div>
@@ -122,7 +113,7 @@
                            </div>
                         </div>
                         <div class="summary-footer">
-                           {{-- <a class="text-muted text-uppercase">(report)</a> --}}
+
                         </div>
                      </div>
                   </div>
@@ -178,12 +169,10 @@
          </div>
       </section>
    </div>
-   {{-- <div class="row">
-      <button class="btn btn-primary btn-click">hello</button>
-   </div> --}}
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="{{url('public/site')}}/js/jquery-3.3.1.min.js"></script>
+<script src="{{url('site')}}/js/jquery-3.3.1.min.js"></script>
    <script>
       var lbOrder=['Đã hủy','Đang chờ','Đang giao'];
       var lbTurnoverYear=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -195,7 +184,7 @@
          type: 'line',
          data: {
             labels:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-            datasets: [{ 
+            datasets: [{
                data:_dataprofit,
                label: "Tổng (vnđ)",
                borderColor: "#FF7777",
@@ -251,27 +240,7 @@
          }
       });
 
-   //    $('.btn-click').click(function(){
-   //       line_chart.data.labels=lbTurnoverMonth;
-   //       line_chart.data.datasets[0].data=[10,5,15,34];
-   //       line_chart.update();
-   //    });
-   //    function dataChange(obj){
-   //       var change=obj.value;
-   //       $.ajax({
-   //          type:'GET',
-   //          url:"{{route('home.sort')}}",
-   //          data:{sort:sortCM},
-   //          success:function(data){
-   //             if(data.code===200){
-   //                $('.product-wrapper').html(data.productcomponent);
-   //             }
-   //          },
-   //          error:function(){
 
-   //          }
-   //       });
-   //    };
    </script>
    @include('library.admin.select')
-@endsection
+@endsection --}}

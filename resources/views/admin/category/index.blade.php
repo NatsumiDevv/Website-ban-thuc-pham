@@ -6,10 +6,10 @@
    <h2>Danh Mục</h2>
 @endsection
 @section('address')
-   <li>
+   {{-- <li>
       <a href="{{route('admin.dashboard')}}">
          <i class="fa fa-home"></i>
-      </a>
+      </a> --}}
    </li>
    <li>
       <a href="{{route('category.index')}}">
@@ -108,7 +108,7 @@
       @csrf
       @method('delete')
    </form>
-   
+
    {{-- modal --}}
    @include('admin.category.create')
    @include('admin.category.edit')

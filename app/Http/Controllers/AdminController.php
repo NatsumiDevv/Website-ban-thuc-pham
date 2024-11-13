@@ -30,7 +30,7 @@ class AdminController extends Controller
         $date = getdate();
         $thisyear=$date['year'];
         $get=array();
-        for ($i=1; $i <= 12; $i++) { 
+        for ($i=1; $i <= 12; $i++) {
             $get[]=Order::whereYear('created_at',$thisyear)->whereMonth('created_at',$i)->where('status',1)->sum('price');
         }
         return json_encode($get);

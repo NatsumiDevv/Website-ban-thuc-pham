@@ -5,12 +5,11 @@
 @section('nav')
    <li><a href="{{route('home.index')}}">Trang Chủ</a></li>
    <li><a href="{{route('home.shop')}}">Cửa Hàng</a></li>
-   <li><a href="{{route('home.introduce')}}">Giới Thiệu</a></li>
-   <li><a href="{{route('home.contact')}}">Liên Hệ</a></li>
+
 @endsection
 @section('nav-search')
 <div class="row justify-content-center">
-   <div class="col-lg-9">
+   <div class="col-lg-12">
       <div class="hero__search">
          <div class="hero__search__form">
             <form action="#">
@@ -18,24 +17,15 @@
                {{-- <button type="submit" class="site-btn">Tìm</button> --}}
             </form>
          </div>
-         <div class="hero__search__phone">
-            <div class="hero__search__phone__icon">
-               <i class="fa fa-phone"></i>
-            </div>
-            <div class="hero__search__phone__text">
-               <h5>+84 984.399.784</h5>
-               <span>Hỗ trợ 24/7</span>
-            </div>
-         </div>
+
       </div>
-      <div class="search-result col-lg-9 pr-5">
-      </div>
+
    </div>
 </div>
 @endsection
 @section('main')
    <!-- Breadcrumb Section Begin -->
-   <section class="breadcrumb-section set-bg" data-setbg="{{url('public/site')}}/img/breadcrumb.jpg">
+   {{-- <section class="breadcrumb-section set-bg" data-setbg="{{url('site')}}/img/breadcrumb.jpg">
       <div class="container">
          <div class="row">
             <div class="col-lg-12 text-center">
@@ -49,8 +39,21 @@
             </div>
          </div>
       </div>
-   </section>
+   </section> --}}
 <!-- Checkout Section Begin -->
+<div class="container" style="background: rgb(237, 28, 36)">
+         <div class="row">
+            <div class="col-lg-12 text-center">
+                  <div class="breadcrumb__text">
+                     <h2>Đặt Hàng</h2>
+                     <div class="breadcrumb__option">
+                        <a href="{{route('home.index')}}">Trang Chủ</a>
+                        
+                     </div>
+                  </div>
+            </div>
+         </div>
+      </div>
 <section class="checkout spad">
    <div class="container">
       <div class="row">
@@ -141,7 +144,7 @@
                            </ul>
                            <div class="checkout__order__subtotal">Tổng <span>{{number_format($total)}}</span></div>
                            <div class="checkout__order__total">Thanh Toán <span>{{number_format($total)}}</span></div>
-                           
+
                            <div class="checkout__input__checkbox">
                               <label for="payment">
                                  Lúc nhận hàng

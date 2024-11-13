@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +23,7 @@ Route::middleware(['auth'])->group(function () {
    Route::get('/order/user', [App\Http\Controllers\HomeController::class, 'order'])->name('home.order');
    Route::post('/contactPost', [App\Http\Controllers\HomeController::class, 'contactPost'])->name('home.contactPost');
    Route::middleware(['checkrole:admin'])->group(function () {
-      Route::get('/dashboard',[App\Http\Controllers\AdminController::class,'index'])->name('admin.dashboard');
+      Route::get('/dashboard',[App\Http\Controllers\CategoryController::class,'index'])->name('admin.dashboard');
       Route::get('/newOrder',[App\Http\Controllers\OrderController::class,'view'])->name('order.view');
       Route::resources([
          'category'=>CategoryController::class,
@@ -50,4 +55,4 @@ Route::get('/carts', [App\Http\Controllers\CartsController::class, 'showCart'])-
 Route::get('/carts-update', [App\Http\Controllers\CartsController::class, 'updateCart'])->name('cart.update');
 Route::get('/carts-delete', [App\Http\Controllers\CartsController::class, 'deleteCart'])->name('cart.delete');
 
-// Route::get('/check', [App\Http\Controllers\AdminController::class, 'check'])->name('dataChart');
+Route::get('/check', [App\Http\Controllers\AdminController::class, 'check'])->name('dataChart');

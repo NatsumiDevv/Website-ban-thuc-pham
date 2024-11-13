@@ -57,7 +57,7 @@ class ProductController extends Controller
                 return redirect()->route('product.index')->with('error','Tên sản phẩm đã tồn tại trong hệ thống!');
             }
         }
-        $des = 'public/uploads';
+        $des = 'uploads';
         $image = $request->file('image')->getClientOriginalName();
         $product=new Product();
         $product->name=$request->name;
@@ -111,7 +111,7 @@ class ProductController extends Controller
     public function update(Request $request,$id)
     {
         //
-            $des = 'public/uploads';
+            $des = 'uploads';
             $product=Product::where('id',$id)->first();
             if(!$request->file('image')==null){
                 $image = $request->file('image')->getClientOriginalName();
@@ -141,8 +141,23 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
-        $product=Product::where('id',$id)->first();
+
+    $product = Product::where('id', $id)->first();
+
+    if ($product) {
+        // Check if the product has an image
+        $imagePath = public_path('uploads/' . $product->image);
+        if (file_exists($imagePath) && is_file($imagePath)) {
+            // Delete the image from storage
+            unlink($imagePath);
+        }
+
+        // Delete the product record from the database
         $product->delete();
-        return redirect()->route('product.index')->with('success','Xóa sản phẩm thành công!');
+
+        return redirect()->route('product.index')->with('success', 'Xóa sản phẩm thành công!');
+    }
+
+    return redirect()->route('product.index')->with('error', 'Sản phẩm không tồn tại!');
     }
 }
